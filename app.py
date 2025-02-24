@@ -477,4 +477,5 @@ def check_rate_limit(session, model, is_reasoning):
 resolve_config()
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=9898)
+    port = int(os.environ.get("PORT", 9898))
+    app.run(host="0.0.0.0", port=port)
